@@ -1,13 +1,26 @@
+
+
+
+
 function isPalindrome(word) {
-  // Write your algorithm here
-}
+    let j = word.length - 1
+    for (let i = 0; i < word.length /2; i++) {
+        if (word[i] != word[j]) {
+            return false;
+        }
+        j--
+    }
+    return true
+  }
 
 /* 
-  Add your pseudocode here
+For each character in the first half of the word, compare with the corresponding character from the second 
+half of the word. If any characters do not match, return false, indicating that the word is not a palindrome.
 */
 
 /*
-  Add written explanation of your solution here
+  This function efficiently checks for palindromes by only iterating through half of the word 
+  and immediately returning false if a mismatch is found
 */
 
 // You can run `node index.js` to view these console logs
